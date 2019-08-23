@@ -1,0 +1,18 @@
+package com.greatdigitallab.spring.core;
+
+public class ScrachCardGiftService implements GiftService {
+
+	private String[] gifts = {
+			"Congratulations! You got a super cool T-Shirt",
+			"Congratulations! You got a Gems",
+			"Congratulations! You got a super cool movie ticket",
+			"Congratulations! You got a Air ticket",
+	};
+	
+	@Override
+	public String getGiftService() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

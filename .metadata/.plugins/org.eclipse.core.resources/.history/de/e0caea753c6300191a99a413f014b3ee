@@ -1,0 +1,16 @@
+package com.greatdigitallab.spring.core;
+
+public class SwimTrainer implements Trainer {
+
+	@Override
+	public String getTodaysTraining() {
+		return "Today, Swim 1000 meter in the pool";
+	}
+
+	@Override
+	public String getGiftService() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

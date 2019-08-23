@@ -1,0 +1,18 @@
+package com.greatdigitallab.spring.core;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SportConfig {
+
+	@Bean
+	public GiftService bagGiftService() {
+		return new BagGiftService();
+	}
+	
+	@Bean
+	public Trainer swimTrainer() {
+		return new SwimTrainer(bagGiftService());
+	}
+}

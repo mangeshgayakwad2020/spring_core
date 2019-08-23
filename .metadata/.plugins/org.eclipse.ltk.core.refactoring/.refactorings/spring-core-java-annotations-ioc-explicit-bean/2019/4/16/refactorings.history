@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.greatdigitallab.spring.core.GymTrainer&apos; to &apos;SwimTrainer&apos;&#x0D;&#x0A;- Original project: &apos;spring-core-java-annotations-ioc&apos;&#x0D;&#x0A;- Original element: &apos;com.greatdigitallab.spring.core.GymTrainer&apos;&#x0D;&#x0A;- Renamed element: &apos;com.greatdigitallab.spring.core.SwimTrainer&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;GymTrainer&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.greatdigitallab.spring.core{GymTrainer.java[GymTrainer" matchStrategy="1" name="SwimTrainer" qualified="false" references="true" similarDeclarations="false" stamp="1555560626807" textual="false" version="1.0"/>
+</session>

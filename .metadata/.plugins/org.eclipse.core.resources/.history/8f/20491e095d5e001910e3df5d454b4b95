@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Load the properties file : trainer.properties -->
+
+	<!-- Define the dependency beans here -->
+	<bean id="myGiftService"
+		class="com.greatdigitallab.spring.core.TShirtGiftService">
+	</bean>
+
+	<!-- Define your beans here -->
+	<bean id="myTrainer"
+		class="com.greatdigitallab.spring.core.GymTrainer">
+		<!-- Setup the constructor injection -->
+		<constructor-arg ref="myGiftService" />
+	</bean>
+
+	<bean id="myAthleticTrainer"
+		class="com.greatdigitallab.spring.core.AthleticTrainer">
+		
+		<!-- Setup the setter injection -->
+		<property name="giftService" ref="myGiftService" />
+		
+		<!-- Setup the literal injection -->
+		<property name="name" value="${trainer.name}" />
+		<property name="emailAddress" value="${trainer.emailAddress}" />
+	</bean>
+
+</beans>
+
+
+
+
+

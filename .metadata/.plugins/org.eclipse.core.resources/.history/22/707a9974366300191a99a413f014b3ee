@@ -1,0 +1,23 @@
+package com.greatdigitallab.spring.core;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MySpringApp {
+
+	public static void main(String[] args) {
+
+		// Load the Spring Configuration file
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);
+		
+		// Get the bean from Spring Container
+		Trainer myTodaysTrainer = context.getBean("swimTrainer", Trainer.class);
+		
+		// Call methods on the bean
+		System.out.println(myTodaysTrainer.getTodaysTraining());
+		
+		// Close the context
+		context.close();
+	}
+
+}

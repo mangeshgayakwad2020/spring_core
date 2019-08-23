@@ -1,0 +1,25 @@
+package com.greatdigitallab.spring.core;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MySpringApp {
+
+	public static void main(String[] args) {
+
+		// Load the Spring Configuration file
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		// Get the first bean from Spring Container
+		Trainer myFirstTrainer = context.getBean("myTrainer", Trainer.class);
+		
+		// Get the second bean from Spring Container
+		Trainer mySecondTrainer = context.getBean("myTrainer", Trainer.class);
+
+		// Check if both the beans are pointing to the same object
+		boolean 
+		
+		// Close the context
+		context.close();
+	}
+
+}

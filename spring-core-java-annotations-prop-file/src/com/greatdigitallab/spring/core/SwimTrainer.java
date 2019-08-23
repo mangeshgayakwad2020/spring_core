@@ -1,0 +1,29 @@
+package com.greatdigitallab.spring.core;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class SwimTrainer implements Trainer {
+	
+	@Value("${sport.name}")
+	private String name;
+
+	@Value("${sport.email}")
+	private String email;
+	
+	@Override
+	public String getTodaysTraining() {
+		return "Today, Swim 1000 meter in the pool";
+	}
+	
+	// getters for the fields
+	public String getName() {
+		return name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+}

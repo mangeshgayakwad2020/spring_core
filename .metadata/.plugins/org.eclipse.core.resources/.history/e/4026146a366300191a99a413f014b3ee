@@ -1,0 +1,6 @@
+package com.greatdigitallab.spring.core;
+
+@Configuration
+public class SportConfig {
+
+}

@@ -1,0 +1,13 @@
+package com.greatdigitallab.spring.core;
+
+import org.springframework.stereotype.Component;
+
+@Component("myGreatTrainer")
+public class SwimTrainer implements Trainer {
+
+	@Override
+	public String getTodaysTraining() {
+		return "Today, Swim 1000 meter in the pool";
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.greatdigitallab.spring.core;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class SwimTrainer implements Trainer {
+
+	@Autowired
+	@Qualifier("scrachCardGiftService")
+	private GiftService giftService;
+	
+	// create a 
+	public SwimTrainer() {
+		System.out.println("");
+	}
+	
+	// configure the Qualifier with the bean id inside constructor arguments
+	public SwimTrainer(@Qualifier("scrachCardGiftService") GiftService giftService) {
+		this.giftService = giftService;
+	}
+
+	@Override
+	public String getTodaysTraining() {
+		return "Today, Swim 1000 meter in the pool";
+	}
+
+	@Override
+	public String getGiftService() {
+		// TODO Auto-generated method stub
+		return giftService.getGiftService();
+	}
+
+}

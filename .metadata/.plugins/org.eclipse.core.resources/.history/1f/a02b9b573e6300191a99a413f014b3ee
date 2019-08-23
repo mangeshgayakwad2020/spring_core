@@ -1,0 +1,30 @@
+package com.greatdigitallab.spring.core;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SportConfig {
+
+	// create a dependency bean bagGiftService()
+	@Bean
+	public GiftService bagGiftService() {
+		return new BagGiftService();
+	}
+	
+	@Bean
+	public GiftService watchGiftService() {
+		return new WatchGiftService();
+	}
+	
+	// Create a main bean swimTrainer() and add the dependency as a constructor argument bagGiftService()
+	@Bean
+	public Trainer swimTrainer(GiftService giftService) {
+		return new SwimTrainer(bagGiftService());
+	}
+	
+	@Bean
+	public Trainer swimTrainer() {
+		return new SwimTrainer(watchGiftService());
+	}
+}
